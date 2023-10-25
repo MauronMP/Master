@@ -1,0 +1,53 @@
+-presentación sobre desarrollo de aplicaciones Web con JSF, JSP y Java servlets
+
+-tutorial sobre programación con EJB (desarrollo y despliegue)
+
+-Plantilla "Hola Mundo" para completar
+
+---------------------------------
+
+Configuracion VM de Tomcat 9.x
+
+-Dcatalina.base="C:\Users\Usuario\Dropbox\miscelanea\DSSBCS\DSS-2023\practicas\p1-mio\.metadata\.plugins\org.eclipse.wst.server.core\tmp1" -Dcatalina.home="C:\Users\Software\apache-tomcat-9.0.65" -Dwtp.deploy="C:\Users\Usuario\Dropbox\miscelanea\DSSBCS\DSS-2023\practicas\p1-mio\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps" -Djava.endorsed.dirs="C:\Users\Software\apache-tomcat-9.0.65\endorsed"
+
+------------------------------------------------------------
+
+Apache Tomcat 9 y 10 son esencialmente el mismo producto. Uno utiliza la nomenclatura de paquetes javax.* y el otro utiliza la nomenclatura jakarta.*, respectivamente. Los dos productos se desarrollan en paralelo.
+
+---------------------------------------------------------------
+
+Jersey 3.1.1 :
+
+Jersey 3.1.1 User Guide : https://eclipse-ee4j.github.io/jersey.github.io/documentation/latest3x/
+
+Ejemplo demostración implementación servicio RESTful sencillo: p1-RESTful.zip
+
+------------------
+
+Importante: Tomcat 9 no es un servidor Jakarta EE, ya que sigue utilizando javax.servlet. Para jecutar los programas de demostración p1-rest y p2-rest hay que desplegarlos en Tomcat !0.x o superior
+
+----------------------
+
+Importante: el espacio de nombres de la API cambió de javax.* a jakarta.*. Esto puede manifestarse de muchas maneras:
+
+-El software escrito para Servlet 4.0 no compila contra los jars de API de Tomcat 10; es decir, el Servlet 5.0 JAR lanza error de compilación en javax.servlet.* pero Servlet 4.0 JAR no lo hace,
+
+-Las aplicaciones Servlet 4.0 que utilizan un descriptor 'web.xml' lanzarán muchas excepciones: ClassNotFoundExceptions y no arrancan; La ejecución con Tomcat 10.x producirá java.lang.NoClassDefFoundError en javax/servlet/ServletRequestListener.
+
+-Las aplicaciones Servlet 4.0 que utilizan un descriptor web.xml registran un error "X is not a jakarta.servlet.Servlet", si se programa utilizando los servicios del servlet y producirá el error:  Servlet class org.restlet.ext.servlet.ServerServlet is not a jakarta.servlet.Servlet.
+
+-Todas las aplicaciones Servlet 4.0 que utilizan anotaciones para declarar servlets dejarán de funcionar.
+
+-Las aplicaciones Servlet 4.0 que dependen de un ServletContainerInitializer (como las aplicaciones Spring y Spring Boot) no arrancarán. Por ejemplo, desplegar Spring MVC 5 en Tomcat 10  indicará un error: "deployment problems". 
+
+-------------------------------
+
+Parte de persistencia de entidades:
+
+-Ejemplo jpa.simple (completo y comprimido) del tutorial de la práctica
+
+-Ejemplo jpa.familias (completo y comprimido) del tutorial de la práctica
+
+-jars: eclipselink.jar y jakarta.persistence-api.jar necesarios para poder ejecutarlos
+
+

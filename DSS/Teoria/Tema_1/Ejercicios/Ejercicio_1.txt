@@ -1,0 +1,11 @@
+
+//Ejercicio_1
+
+Context Inv::
+
+GestionClients::consigueCliente(in_cliente:IdentificadorCliente):DetallesCLiente
+    pre:: clientes -> exists(c|c.id = cliente)
+    post:: let cliente = clientes -> (c|c.id = Cliente)
+        in result.nombre = cliente.nombre and 
+        result.codigoPostal cliente.codigoPostal and 
+        result.eCorreo = cliente.eCorreo
