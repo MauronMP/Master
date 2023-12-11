@@ -1,0 +1,23 @@
+NOTAS Charla ELCA the independent Swiss It COMPANY
+
+
+************** PARTE RRH ******************
+-- Resumen qué es
+
+-- Empresas trabaja
+
+-- localizaciones
+************** PARTE RRH ******************
+
+
+
+
+
+
+
+************** PARTE Javier ferrer castillo ******************
+
+agile ...
+ejemplo organización proyecto con organización de un ivja,e previsión de tiempo, cosas inesperadadas ...
+scrum, uso de dailys, retros, métodos de comunicación con el equipo, ver como esta el equipo, crear equipo y no un grupo de programadores, ver problemas, temas a tratar etc
+Revision del codigo, bugs, tests, verificación de los datos y control de mantenimiento
