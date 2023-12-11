@@ -1,0 +1,9 @@
+Modelo: Simple_model
+- Tiempo empleado: 7.572023630142212 s
+- Conjunto:
+  - Train:
+    - Accuracy: 98.644447%
+    - Loss: 4.578532%
+  - Test:
+    - Accuracy: 95.999998%
+    - Loss: 24.052012%

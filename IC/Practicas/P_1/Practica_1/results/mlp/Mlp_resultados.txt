@@ -1,0 +1,9 @@
+Modelo: Mlp
+- Tiempo empleado: 113.3214111328125 s
+- Conjunto:
+  - Train:
+    - Accuracy: 95.451850%
+    - Loss: 15.367688%
+  - Test:
+    - Accuracy: 95.260000%
+    - Loss: 15.090677%

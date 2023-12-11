@@ -1,0 +1,9 @@
+Modelo: Cnn
+- Tiempo empleado: 159.91456174850464 s
+- Conjunto:
+  - Train:
+    - Accuracy: 99.422222%
+    - Loss: 2.222640%
+  - Test:
+    - Accuracy: 99.360001%
+    - Loss: 2.312878%
